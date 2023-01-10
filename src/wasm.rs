@@ -1,3 +1,4 @@
+use std::ops::{Add};
 use std::time::Duration;
 use wasm_bindgen::JsCast;
 use wasm_bindgen::JsValue;
@@ -6,6 +7,14 @@ use wasm_bindgen::JsValue;
 pub struct Instant(Duration);
 
 impl Eq for Instant {}
+
+
+impl Add<Duration> for Instant {
+	type Output = Instant;
+	fn add(self, other: Duration) -> Instant {
+		Instant(self.0.add(other))
+	}
+}
 
 impl Instant {
     #[inline]
