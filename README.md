@@ -1,4 +1,4 @@
-# Performance
+# Trice
 
 Trice is a minimal replacement for `std::time::Instant` that works in WASM for the web and Node.js, enabling time measurement and performance calculations.
 
