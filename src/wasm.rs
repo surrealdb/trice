@@ -20,6 +20,10 @@ impl Instant {
 	pub fn duration_since(&self, earlier: Instant) -> Duration {
 		self.0 - earlier.0
 	}
+	#[inline]
+	pub fn saturating_duration_since(&self, earlier: Instant) -> Duration {
+		self.0 - earlier.0
+	}
 }
 
 fn duration_from_f64(millis: f64) -> Duration {
