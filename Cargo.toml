@@ -2,7 +2,7 @@
 name = "trice"
 publish = true
 edition = "2021"
-version = "0.3.0"
+version = "0.3.1"
 readme = "README.md"
 authors = ["Tobie Morgan Hitchcock <tobie@surrealdb.com>"]
 description = "A minimal replacement for std::time::Instant that works in WASM for the web and Node.js."
