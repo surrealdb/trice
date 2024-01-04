@@ -24,6 +24,14 @@ impl Instant {
 	pub fn saturating_duration_since(&self, earlier: Instant) -> Duration {
 		self.0 - earlier.0
 	}
+	#[inline]
+	pub fn checked_add(&self, duration: Duration) -> Option<Instant> {
+		self.0.checked_add(duration).map(Instant)
+	}
+	#[inline]
+	pub fn checked_sub(&self, duration: Duration) -> Option<Instant> {
+		self.0.checked_sub(duration).map(Instant)
+	}
 }
 
 fn duration_from_f64(millis: f64) -> Duration {
